@@ -1,0 +1,21 @@
+<%= link_to 'New Card', new_card_path %>
+<center>
+  <hr>
+<h1>Listing Cards</h1>
+ 
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Content</th>
+    <th></th>
+  </tr>
+ 
+  <% @cards.each do |card| %>
+    <tr>
+      <td><%= card.subject %></td>
+      <td><%= card.content %></td>
+    </tr>
+  <% end %>
+</table>
+<hr>
+</center>
