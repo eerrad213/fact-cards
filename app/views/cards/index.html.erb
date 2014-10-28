@@ -16,9 +16,11 @@
       <td><%= card.subject %></td>
       <td><%= card.content %></td>
       <td><%= link_to 'Show', card_path(card) %></td>
+      <% if current_user %>
       <td><%= link_to 'Edit', edit_card_path(card) %></td>
       <td><%= link_to 'Destroy', card_path(card),
-                    method: :delete, data: { confirm: 'Are you sure you wish to delete this?' } %></td>
+        method: :delete, data: { confirm: 'Are you sure you wish to delete this?' } %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
