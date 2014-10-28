@@ -1,5 +1,7 @@
 class CardsController < ApplicationController
 
+	before_filter :authorize, only: [:edit, :update]
+
 	def index
 		@cards = Card.all
 	end
@@ -31,6 +33,8 @@ class CardsController < ApplicationController
 
 		if @card.update(card_params)
 			redirect_to @card
+			#  if @article.update_attributes(params[:article])
+			# redirect_to @article, notice: "Article has been updated."
 		else
 			render 'edit'
 		end
