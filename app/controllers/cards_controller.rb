@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
 
-	before_filter :authorize, only: [:edit, :update]
+	before_filter :authorize, only: [:edit, :update, :new]
 
 	def index
 		@cards = Card.all
