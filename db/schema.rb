@@ -11,13 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028170359) do
+ActiveRecord::Schema.define(version: 20141029145345) do
 
   create_table "cards", force: true do |t|
     t.string   "subject"
     t.string   "content"
     t.text     "fact"
     t.string   "references"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "card_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["card_id"], name: "index_comments_on_card_id"
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
