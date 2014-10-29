@@ -1,5 +1,7 @@
 <%= link_to 'Back', cards_path %>
+<% if current_user %>
 <%= link_to 'Edit', edit_card_path(@card) %>
+<% end %>
 <center>
 <p>
   <strong>Subject:</strong>
