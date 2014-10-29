@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20141028191920) do
+=======
+ActiveRecord::Schema.define(version: 20141029145345) do
+>>>>>>> comment
 
   create_table "cards", force: true do |t|
     t.string   "subject"
@@ -22,6 +26,19 @@ ActiveRecord::Schema.define(version: 20141028191920) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "comments", force: true do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "card_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["card_id"], name: "index_comments_on_card_id"
+
+>>>>>>> comment
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_digest"
