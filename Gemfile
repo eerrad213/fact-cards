@@ -1,16 +1,31 @@
 source 'https://rubygems.org'
 
+group :test do
+	gem 'capybara'
+	gem 'rspec-rails'
+end
+gem 'simplecov', :require => false, :group => :test
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :assets do
+	# Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites
+	gem 'twitter-bootstrap-rails'
+	# Use SCSS for stylesheets
+	gem 'sass-rails', '~> 4.0.3'
+	# Use Uglifier as compressor for JavaScript assets
+	gem 'uglifier', '>= 1.3.0'
+	# Use CoffeeScript for .js.coffee assets and views
+	gem 'coffee-rails', '~> 4.0.0'
+end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -42,4 +57,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # gem 'ancestry'
 
+# This gem creates my paginated views for my cards
 gem 'kaminari'
+
+# This gem allows you to easily add Growl-like notifications
+gem "gritter", "1.1.0"

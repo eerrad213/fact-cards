@@ -1,20 +1,21 @@
 <% if current_user %>
 <%= link_to 'All Cards', controller: 'cards' %>
+<%= link_to "<button>All Cards</button>".html_safe, cards_path %>
 <% end %>
 <center>
 	<hr>
 	<h1>Welcome to my Fact Card app!</h1>
 
 	<h2>Click above on "All Cards" to view more facts.</h2>
-	<hr>
-	<br>
-	<br>
-	<br>
-	<%= render partial: 'cards/card', locals: { card: Card.last } %>
-	<br>
-	<br>
-	<br>
-	<br>
-	<hr>
+		<hr>
+		<br>
+		<br>
+		<br>
+		<%= render partial: 'cards/card', locals: { card: Card.last } %>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
 </center>
 
