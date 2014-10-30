@@ -5,7 +5,8 @@ class CardsController < ApplicationController
 	before_filter :authorize, only: [:edit, :update, :new]
 
 	def index
-		@cards = Card.all
+		# @cards = Card.all
+		@cards = Card.order("subject").page(params[:page]).per(5)
 	end
 
 	def edit
