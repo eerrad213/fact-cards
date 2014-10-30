@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-size: cover;
+    background-image: url('Cork-Board-Texture.jpg');    
+	margin: 50px auto;
+    width: 	500px;
+    color: black;
+}
