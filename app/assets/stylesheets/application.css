@@ -16,8 +16,55 @@
 
 body {
     background-size: cover;
-    background-image: url('Cork-Board-Texture.jpg');    
-	margin: 50px auto;
-    width: 	500px;
-    color: black;
+    background-image: url('blackboard.jpg');    
+/*	margin: 50px auto;
+    width: 	500px;*/
+    color: white;
+    font-size: 125%
+}
+
+/*.navbar {
+	position: fixed;
+}*/
+
+.navbar-inverse {
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+#user {
+	float: right;
+	margin-right: 3%;
+	margin-top: 1%;
+}
+
+.welcome_card {
+	margin-top: 10%;
+	background-size: 500px 200px;
+    background-image: url('magnet.jpeg');
+	width: 	500px;
+	color: black;
+}
+
+.comments {
+	color: white;
+}
+
+.cards {
+	margin-top: 10%;
+	background-size: 500px 250px;
+    background-image: url('magnet.jpeg');
+    background-repeat: no-repeat;
+	width: 	500px;
+	color: black;
+	padding: 20px;
+}
+
+.actions {
+	color: black;
+}
+
+.user_input {
+	color: black;
 }
