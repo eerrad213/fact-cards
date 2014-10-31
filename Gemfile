@@ -61,4 +61,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'kaminari'
 
 # This gem allows you to easily add Growl-like notifications
-gem "gritter", "1.1.0"
+# gem "gritter", "1.1.0"
+
+# Erd generator
+gem "rails-erd"

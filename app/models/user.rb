@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+	has_many :cards,
+
 	has_secure_password
 
 	def user_params
