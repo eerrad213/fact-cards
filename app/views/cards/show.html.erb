@@ -1,31 +1,51 @@
-<%= link_to 'Back', cards_path %>
-<% if current_user %>
-<%= link_to 'Edit', edit_card_path(@card) %>
-<% end %>
-<center>
-<p>
-  <strong>Subject:</strong>
-  <%= @card.subject %>
-</p>
- 
-<p>
-  <strong>Content:</strong>
-  <%= @card.content %>
-</p>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span10">
+			<div class="cards">
+				<br>
+				<br>
+				<br>
+				<br>
+				<p>
+			  		<strong>Subject:</strong>
+			  		<%= @card.subject %>
+				</p>
+			 
+				<p>
+			  		<strong>Content:</strong>
+			  		<%= @card.content %>
+				</p>
 
-<p>
-  <strong>Fact:</strong>
-  <%= @card.fact %>
-</p>
+				<p>
+			  		<strong>Fact:</strong>
+			  		<%= @card.fact %>
+				</p>
+				<br>
+				<br>
+				<br>
+			</div>
+			<br>
+			<br>
+			<p>
+			  <strong>References:</strong>
+			  <%= link_to @card.references, @card.references %>
+			</p>
+		</div>
+		<% if current_user %>
+			<%= link_to "<button>Edit Card</button>".html_safe, edit_card_path(@card) %>
+		<% end %>
 
-<p>
-  <strong>References:</strong>
-  <%= link_to @card.references %>
-</p>
-</center>
+		<div class="span2">
+			<hr>
+			<br>
+			<br>
+			<div class="comments">
+				<h2>Comments</h2>
+				<%= render @card.comments %>
 
-<h2>Comments</h2>
-<%= render @card.comments %>
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+				<h2>Add a comment:</h2>
+				<%= render "comments/form" %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -11,25 +11,33 @@
   </div>
   <% end %>
 
-  <p>
+  <div class="field">
     <%= f.label :subject %>
-    <%= f.text_field :subject %>
+    <p class="user_input">
+      <%= f.text_field :subject %>
+    </p>
 
     <%= f.label :content %>
-    <%= f.text_field :content %>
-  </p>
+    <p class="user_input">
+      <%= f.text_field :content %>
+    </p>
+  </div>
  
-  <p>
+  <div class="field">
     <%= f.label :fact %><br>
-    <%= f.text_area :fact %>
-  </p>
+    <p class="user_input">
+      <%= f.text_area :fact %>
+    </p>
+  </div>
  
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="field">
+    <div class="actions"><%= submit_tag "Submit" %>
+  </div>
 
-  <p>
+  <div class="field">
     <%= f.label :references %><br>
-    <%= f.url_field :references %>
-  </p>
+    <p class="user_input">
+      <%= f.url_field :references %>
+    </p>
+  </div>
 <% end %>
