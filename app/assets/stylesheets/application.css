@@ -68,3 +68,7 @@ body {
 .user_input {
 	color: black;
 }
+
+.noposts {
+    color: red;
+}
