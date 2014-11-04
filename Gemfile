@@ -13,7 +13,7 @@ gem 'sqlite3', group: :development
 
 group :production do
 	gem 'pg'
-	gem 'rails_12factor'
+	# gem 'rails_12factor'
 end
 
 # Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites
